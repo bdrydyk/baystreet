@@ -1,0 +1,22 @@
+
+{{extend 'layout.html'}}
+
+{{if 'message' in globals():}}
+{{=BEAUTIFY(response._vars)}}
+{{elif 'content' in globals():}}
+{{=content}}
+{{else:}}
+<ul>
+<li>Copy your schedule as shown below: </li>
+  <ul id="imagelist">
+    <li> {{=IMG(_src=URL('static/images','tut-0.png'), _alt="My Logo")}}</li>
+    <li> {{=IMG(_src=URL('static/images','tut-1.png'), _alt="My Logo")}}</li>
+  </ul>
+<li>Put your personal email and paste the schedule text in the form below. 
+</li>
+<li>A .ics file will be sent to your email from baystreetschedule@gmail.com. You can open it on your phone or computer. </li>
+<li>If you don't see the email, check your spam folder. Because this script sends a file which could be used to attack your computer, you email is protecting you from the file.</li>
+
+</ul>
+{{=form}}
+{{pass}}

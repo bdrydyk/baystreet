@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="{{=T.accepted_language or 'en'}}"> 
+<head>
+<title>{{=response.title or request.application}}</title>
+  <meta charset="utf-8" />
+  <meta name="application-name" content="{{=request.application}}" />
+  <meta name="google-site-verification" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="{{=URL('static','images/favicon.ico')}}" type="image/x-icon">
+  <link rel="apple-touch-icon" href="{{=URL('static','images/favicon.png')}}">
+
+  <script src="{{=URL('static','js/modernizr.custom.js')}}"></script>
+
+  <!-- include stylesheets -->
+  {{  
+  response.files.append(URL('static','css/baystreet.css'))
+  }}
+
+  {{include 'web2py_ajax.html'}}
+
+
+
+
+       <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css" type="text/css" media="all" />
+       <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+
+  <noscript><link href="{{=URL('static', 'css/web2py_bootstrap_nojs.css')}}" rel="stylesheet" type="text/css" /></noscript>
+    <noscript><link href="{{=URL('static', 'css/baystreet.css')}}" rel="stylesheet" type="text/css" /></noscript>
+  {{block head}}{{end}}
+</head>
+
+<body>
+  <!-- Navbar ================================================== -->
+<!--/top navbar -->
+
+  <div class="container">
+    <!-- Masthead ================================================== -->
+    <header class="mastheader row" id="header">
+      <div>
+          <div class="page-header">
+              <h1>
+                  {{=response.title}} Schedule Emailer
+              </h1>
+          </div>
+      </div>
+    </header>
+
+    <section id="main">
+
+        <div>
+            {{block center}}
+            {{include}}
+            {{end}}
+        </div>
+
+    </section><!--/main-->
+
+    <!-- Footer ================================================== -->
+    <div class="row">
+        <footer class="footer span12" id="footer">
+            <div class="footer-content">
+                {{block footer}} <!-- this is default footer -->
+                <div class="copyright pull-left">{{=T('Copyright')}} &#169; {{=request.now.year}}</div>
+                <div id="poweredBy" class="pull-right">
+                    {{=T('Powered by')}}
+                    Brandon Drydyk and 
+                    <a href="http://www.web2py.com/">web2py</a>
+                </div>
+                {{end}}
+            </div>
+        </footer>
+    </div>
+
+  </div> <!-- /container -->
+
+  <script src="{{=URL('static','js/bootstrap.min.js')}}"></script>
+  <script src="{{=URL('static','js/web2py_bootstrap.js')}}"></script>
+  
+</body>
+</html>
+
