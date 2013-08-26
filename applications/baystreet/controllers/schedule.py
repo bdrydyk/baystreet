@@ -21,10 +21,10 @@ from pytz import timezone
 
 def index():
 
-    form = FORM(
-            INPUT(_name='email',  requires=[IS_NOT_EMPTY(),IS_EMAIL(error_message='invalid email!')]),
-            TEXTAREA(_name="schedule_text", requires=IS_NOT_EMPTY()),
-            INPUT(_type='submit'))
+    form=FORM(TABLE(
+                    TR("Your personal email:",INPUT(_type="text",_name="email",requires=IS_EMAIL())),
+                    TR("Paste your schedule here",TEXTAREA(_name="schedule_text", requires=IS_NOT_EMPTY())),
+                    TR("",INPUT(_type="submit",_value="SUBMIT"))))
     if form.process().accepted:
 
         mail = Mail()
@@ -51,8 +51,8 @@ def index():
         session.ical_text = ical_text
 
 
-        redirect('/baystreet/schedule/schedule_file.ics')
-        #return dict(result="success", email=session.email)
+        #redirect('/baystreet/schedule/schedule_file.ics')
+        return dict(result="success", email=session.email)
 
        # return dict(email=session.user_email, text=session.schedule_text)
     return dict(form=form)
