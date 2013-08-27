@@ -19,6 +19,7 @@ from datetime import datetime, timedelta
 import vobject
 from pytz import timezone
 
+@auth.requires_login()
 def index():
 
     form=FORM(TABLE(
@@ -44,7 +45,7 @@ def index():
 
         mail.send(session.email,
             'Message subject',
-            '<html>hi man</html>',
+            '<html>hi guys!</html>',
             attachments = mail.Attachment(outfile, 'schedule.ics'))
 
 
@@ -80,46 +81,8 @@ def user():
     """
     return dict(form=auth())
 
-@cache.action()
-def download():
-    """
-    allows downloading of uploaded files
-    http://..../[app]/default/download/[filename]
-    """
-    return response.download(request, db)
 
-
-def call():
-    """
-    exposes services. for example:
-    http://..../[app]/default/call/jsonrpc
-    decorate with @services.jsonrpc the functions to expose
-    supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv
-    """
-    return service()
-
-
-@auth.requires_signature()
-def data():
-    """
-    http://..../[app]/default/data/tables
-    http://..../[app]/default/data/create/[table]
-    http://..../[app]/default/data/read/[table]/[id]
-    http://..../[app]/default/data/update/[table]/[id]
-    http://..../[app]/default/data/delete/[table]/[id]
-    http://..../[app]/default/data/select/[table]
-    http://..../[app]/default/data/search/[table]
-    but URLs must be signed, i.e. linked with
-      A('table',_href=URL('data/tables',user_signature=True))
-    or with the signed load operator
-      LOAD('default','data.load',args='tables',ajax=True,user_signature=True)
-    """
-    return dict(form=crud())
-
-
-
-
-
+@auth.requires_login()
 def process_raw_schedule(raw_schedule):
     """    raw_scheduleSchedule begins Aug 17, 2013    Start                       Finish  
     Saturday        11:00AM                         8:00PM        

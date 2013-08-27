@@ -26,10 +26,15 @@ li {
     margin-bottom:0.1em;
     font-size: 1.00em;
     clear:left;
+    padding-bottom: 1em;
 }
 #imagelist{
     list-style-type: none;
 
+}
+ span.bold-red {
+    color: red;
+    font-weight: bold;
 }
 span,input,select,textarea,button,label,a {display:inline}
 img {border:0}

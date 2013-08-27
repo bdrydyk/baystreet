@@ -53,3 +53,5 @@ CREATE TABLE auth_cas(
     renew CHAR(1)
 );
 success!
+timestamp: 2013-08-27T00:10:35.674498
+ALTER TABLE auth_user ADD username CHAR(128);
