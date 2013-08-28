@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"path": "applications/baystreet/controllers"
+		},
+		{
+			"path": "applications/baystreet/models"
+		},
+		{
+			"path": "applications/baystreet/views"
+		},
+		{
+			"path": "applications/baystreet/static"
+		}
+	]
+}

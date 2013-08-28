@@ -1,0 +1,36 @@
+
+{{extend 'layout.html'}}
+    <header class="mastheader row" id="header">
+      <div>
+          <div class="page-header">
+              <h1>
+                  {{=response.title}} Schedule Emailer
+              </h1>
+          </div>
+      </div>
+    </header>
+{{if 'result' in globals():}}
+  {{=BEAUTIFY(response._vars)}}
+{{elif 'content' in globals():}}
+{{=content}}
+{{else:}}
+<ul>
+<li>Copy your schedule as shown below: </li>
+  <ul id="imagelist">
+    <li> {{=IMG(_src=URL('static/images','tut-0.png'), _alt="My Logo")}}</li>
+    <li> {{=IMG(_src=URL('static/images','tut-1.png'), _alt="My Logo")}}</li>
+  </ul>
+<li>Fill out the form below with your personal email and the pasted schedule text. COMMAND-C COMMAND-V
+</li>
+<li>A .ics file will be sent to your email from baystreetschedule@gmail.com. You can open it on your phone or computer. </li>
+<li>If you don't see the email, check your spam folder. Because this script sends ics schedule file which could be used to attack your computer, your email is protecting you from the file.</li>
+<li><span class="bold-red">This is just a little project I did for fun as an exersize, so please don't rely on it as a primary source of schedule information. I'm only sharing it becuase I thought it might be interesting.
+</span>
+</li>
+<li><span class="bold-red"> Don't share this with people
+</span>
+</li>
+
+</ul>
+{{=form}}
+{{pass}}

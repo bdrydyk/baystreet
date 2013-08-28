@@ -104,6 +104,7 @@ routers = dict(
     BASE=dict(
         default_application='baystreet',
         default_controller = 'schedule',
+        applications = "ALL"
     ),
 )
 

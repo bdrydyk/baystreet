@@ -1,0 +1,560 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"raw_schedule",
+				"raw_schedule"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "applications/baystreet/views/layout.html",
+			"settings":
+			{
+				"buffer_size": 2493,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "router.py",
+			"settings":
+			{
+				"buffer_size": 9452,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes.py",
+			"settings":
+			{
+				"buffer_size": 9522,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "applications/baystreet/views/schedule/index.html",
+			"settings":
+			{
+				"buffer_size": 1376,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "applications/baystreet/controllers/schedule.py",
+			"settings":
+			{
+				"buffer_size": 5111,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "applications/baystreet/static/css/baystreet.css",
+			"settings":
+			{
+				"buffer_size": 5942,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "applications/baystreet/models/db.py",
+			"settings":
+			{
+				"buffer_size": 3648,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "applications/baystreet/views/default/user.html",
+			"settings":
+			{
+				"buffer_size": 888,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Schedule begins Aug 17, 2013    Start                       Finish  \nSaturday        11:00AM                         8:00PM        \nSunday      11:00AM                         8:00PM        \nMonday      1:00PM                          10:00PM       \nTuesday     1:00PM                          10:00PM       \nWednesday       00:00AM                         00:00AM       \nThursday        00:00AM                         00:00AM       \nFriday      11:00AM                         8:00PM\n\n\n\nSchedule begins Aug 17, 2013 Start Finish Saturday 11:00AM 8:00PM Sunday 11:00AM 8:00PM Monday 1:00PM 10:00PM Tuesday 1:00PM 10:00PM Wednesday 00:00AM 00:00AM Thursday 00:00AM 00:00AM Friday 11:00AM 8:00PM\n\nSchedule begins {} Start Finish Saturday {} Sunday {} Monday {} Tuesday {} Wednesday {} Thursday {} Friday {}\n\nSchedule begins {} Start Finish {} {} {} {} {} {} {} {} {} {} {} {} {} {}\n\n    form=FORM(TABLE(TR(\"Your name:\",INPUT(_type=\"text\",_name=\"name\",requires=IS_NOT_EMPTY())),\n                    TR(\"Your email:\",INPUT(_type=\"text\",_name=\"email\",requires=IS_EMAIL())),\n                    TR(\"Admin\",INPUT(_type=\"checkbox\",_name=\"admin\")),\n                    TR(\"Sure?\",SELECT('yes','no',_name=\"sure\",requires=IS_IN_SET(['yes','no']))),\n                    TR(\"Profile\",TEXTAREA(_name=\"profile\",value=\"write something here\")),\n                    TR(\"\",INPUT(_type=\"submit\",_value=\"SUBMIT\"))))\n\n\n    ics_string =\"\"\"\nBEGIN:VCALENDAR\nCALSCALE:GREGORIAN\nVERSION:2.0\n\nX-WR-CALNAME:Apple store baystreet\nMETHOD:PUBLISH\n\nBEGIN:VTIMEZONE\nTZID:US/Pacific\nBEGIN:DAYLIGHT\nTZOFFSETFROM:-0800\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\nDTSTART:20070311T020000\nTZNAME:PDT\nTZOFFSETTO:-0700\nEND:DAYLIGHT\nBEGIN:STANDARD\nTZOFFSETFROM:-0700\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\nDTSTART:20071104T020000\nTZNAME:PST\nTZOFFSETTO:-0800\nEND:STANDARD\nEND:VTIMEZONE\n\nBEGIN:VEVENT\nTRANSP:OPAQUE\nSUMMARY:Sat 1-10\nDTSTART;TZID=US/Pacific:20130622T130000\nDTEND;TZID=US/Pacific:20130617T220000\nDTSTAMP:20130627T014351Z\nLOCATION:Apple Store Baystreet\nEND:VEVENT\n\nBEGIN:VEVENT\nTRANSP:OPAQUE\nSUMMARY:Sun 9-5\nDTSTART;TZID=US/Pacific:20130618T090000\nDTEND;TZID=US/Pacific:20130618T170000\nDTSTAMP:20130627T014351Z\nLOCATION:Apple Store Baystreet\nEND:VEVENT\n\nBEGIN:VEVENT\nTRANSP:OPAQUE\nSUMMARY:Mon 9-5\nDTSTART;TZID=US/Pacific:20130618T090000\nDTEND;TZID=US/Pacific:20130618T170000\nDTSTAMP:20130627T014351Z\nLOCATION:Apple Store Baystreet\nEND:VEVENT\n\nBEGIN:VEVENT\nTRANSP:OPAQUE\nSUMMARY:Tues 9-5\nDTSTART;TZID=US/Pacific:20130618T090000\nDTEND;TZID=US/Pacific:20130618T170000\nDTSTAMP:20130627T014351Z\nLOCATION:Apple Store Baystreet\nEND:VEVENT\n\nBEGIN:VEVENT\nTRANSP:OPAQUE\nSUMMARY:Wed 9-5\nDTSTART;TZID=US/Pacific:20130618T090000\nDTEND;TZID=US/Pacific:20130618T170000\nDTSTAMP:20130627T014351Z\nLOCATION:Apple Store Baystreet\nEND:VEVENT\n\nBEGIN:VEVENT\nTRANSP:OPAQUE\nSUMMARY:Thurs 9-5\nDTSTART;TZID=US/Pacific:20130618T090000\nDTEND;TZID=US/Pacific:20130618T170000\nDTSTAMP:20130627T014351Z\nLOCATION:Apple Store Baystreet\nEND:VEVENT\n\nBEGIN:VEVENT\nTRANSP:OPAQUE\nSUMMARY:Fri 9-5\nDTSTART;TZID=US/Pacific:20130618T090000\nDTEND;TZID=US/Pacific:20130618T170000\nDTSTAMP:20130627T014351Z\nLOCATION:Apple Store Baystreet\nEND:VEVENT\n\nEND:VCALENDAR\n    \"\"\"\n\n\n\n\n    raw_schedule    :   \nSchedule begins Aug 17, 2013 Start Finish Saturday 11:00AM 8:00PM Sunday 11:00AM 8:00PM Monday 1:00PM 10:00PM Tuesday 1:00PM 10:00PM Wednesday 00:00AM 00:00AM Thursday 00:00AM 00:00AM Friday 11:00AM 8:00PM\nresult  :   \nsuccess\nsaturday    :   \n11:00AM 8:00PM\nstartdate   :   \nAug 17, 2013\n\n\n%b %d, %Y\n\ndt = datetime.datetime.strptime(\"Aug 17, 2013\", \"%b %d, %Y\")\nstime = datetime.datetime.strptime(\"11:00AM\",\"%I:%M%p\").time()\n\ndt.replace(hour=stime.hour(), minute=stime.minute())\n\n\nstime = datetime.datetime.strptime()\nstime = datetime.datetime.strptime(\"11:00AM\",\"%I:%M%p\").time()\netime = datetime.datetime.strptime(\"11:00AM\",\"%I:%M%p\").time()\n\n\nDirective   Meaning Notes\n%a  Locale’s abbreviated weekday name.   \n%A  Locale’s full weekday name.  \n%b  Locale’s abbreviated month name.     \n%B  Locale’s full month name.    \n%c  Locale’s appropriate date and time representation.   \n%d  Day of the month as a decimal number [01,31].    \n%H  Hour (24-hour clock) as a decimal number [00,23].    \n%I  Hour (12-hour clock) as a decimal number [01,12].    \n%j  Day of the year as a decimal number [001,366].   \n%m  Month as a decimal number [01,12].   \n%M  Minute as a decimal number [00,59].  \n%p  Locale’s equivalent of either AM or PM. (1)\n%S  Second as a decimal number [00,61]. (2)\n%U  Week number of the year (Sunday as the first day of the week) as a decimal number [00,53]. All days in a new year preceding the first Sunday are considered to be in week 0.    (3)\n%w  Weekday as a decimal number [0(Sunday),6].   \n%W  Week number of the year (Monday as the first day of the week) as a decimal number [00,53]. All days in a new year preceding the first Monday are considered to be in week 0.    (3)\n%x  Locale’s appropriate date representation.    \n%X  Locale’s appropriate time representation.    \n%y  Year without century as a decimal number [00,99].    \n%Y  Year with century as a decimal number.   \n%Z  Time zone name (no characters if no time zone exists).   \n%%  A literal '%' character.",
+			"file": "applications/baystreet/necessarytext.py",
+			"file_size": 4715,
+			"file_write_time": 1377410242000000,
+			"settings":
+			{
+				"buffer_size": 5212,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# -*- coding: utf-8 -*-\n# this file is released under public domain and you can use without limitations\n\n#########################################################################\n## This is a sample controller\n## - index is the default action of any application\n## - user is required for authentication and authorization\n## - download is for downloading files uploaded in the db (does streaming)\n## - call exposes all registered services (none by default)\n#########################################################################\nimport vobject\nfrom datetime import datetime\nfrom parse import *\nfrom gluon.tools import Mail\nimport StringIO\n\ndef index():\n    form=FORM(TABLE(\n                    TR(\"Your personal email:\",INPUT(_type=\"text\",_name=\"email\",requires=IS_EMAIL())),\n                    TR(\"Paste your schedule here\",TEXTAREA(_name=\"schedule_text\", requires=IS_NOT_EMPTY())),\n                    TR(\"\",INPUT(_type=\"submit\",_value=\"SUBMIT\"))))\n    if form.accepts(request,session):\n\n        mail = Mail()\n        mail.settings.server = 'smtp.gmail.com:25'\n        mail.settings.sender = 'baystreetschedule@gmail.com'\n        mail.settings.login = 'baystreetschedule@gmail.com:dekeyser'\n\n        session.email = form.vars.email\n        session.raw_schedule = form.vars.schedule_text\n        #redirect(URL('second'))\n        #Here is where we process the raw form data and create a vobject ical object\n        ical_text = process_raw_schedule(session.raw_schedule)\n        #start_date = datetime.strptime(dt, \"%b %d, %Y\")\n        outfile = StringIO.StringIO(ical_text)\n        #return dict(result=\"success\", email=session.user_email, raw_schedule=session.raw_schedule, ical_text=ical_text)\n        #return ical_text\n\n        mail.send(session.email,\n            'Message subject',\n            '<html>hi man</html>',\n            attachments = mail.Attachment(outfile, 'schedule.ics'))\n\n\n        session.ical_text = ical_text\n\n\n        #redirect('/baystreet/schedule/schedule_file.ics')\n        return dict(result=\"success\", email=session.email, form=form)\n\n       # return dict(email=session.user_email, text=session.schedule_text)\n    return dict(form=form)\ndef schedule_file():\n    ical_text = session.ical_text\n\n    return ical_text\n\n\n\ndef user():\n    \"\"\"\n    exposes:\n    http://..../[app]/default/user/login\n    http://..../[app]/default/user/logout\n    http://..../[app]/default/user/register\n    http://..../[app]/default/user/profile\n    http://..../[app]/default/user/retrieve_password\n    http://..../[app]/default/user/change_password\n    http://..../[app]/default/user/manage_users (requires membership in \n    use @auth.requires_login()\n        @auth.requires_membership('group name')\n        @auth.requires_permission('read','table name',record_id)\n    to decorate functions that need access control\n    \"\"\"\n    return dict(form=auth())\n\n@cache.action()\ndef download():\n    \"\"\"\n    allows downloading of uploaded files\n    http://..../[app]/default/download/[filename]\n    \"\"\"\n    return response.download(request, db)\n\n\ndef call():\n    \"\"\"\n    exposes services. for example:\n    http://..../[app]/default/call/jsonrpc\n    decorate with @services.jsonrpc the functions to expose\n    supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv\n    \"\"\"\n    return service()\n\n\n@auth.requires_signature()\ndef data():\n    \"\"\"\n    http://..../[app]/default/data/tables\n    http://..../[app]/default/data/create/[table]\n    http://..../[app]/default/data/read/[table]/[id]\n    http://..../[app]/default/data/update/[table]/[id]\n    http://..../[app]/default/data/delete/[table]/[id]\n    http://..../[app]/default/data/select/[table]\n    http://..../[app]/default/data/search/[table]\n    but URLs must be signed, i.e. linked with\n      A('table',_href=URL('data/tables',user_signature=True))\n    or with the signed load operator\n      LOAD('default','data.load',args='tables',ajax=True,user_signature=True)\n    \"\"\"\n    return dict(form=crud())\n\n\n\n\n\ndef process_raw_schedule(raw_schedule):\n    \"\"\"    raw_scheduleSchedule begins Aug 17, 2013    Start                       Finish  \n    Saturday        11:00AM                         8:00PM        \n    Sunday      11:00AM                         8:00PM        \n    Monday      1:00PM                          10:00PM       \n    Tuesday     1:00PM                          10:00PM       \n    Wednesday       00:00AM                         00:00AM       \n    Thursday        00:00AM                         00:00AM       \n    Friday      11:00AM                         8:00PM\n    \"\"\"\n\n    from parse import *\n    from datetime import datetime, timedelta\n    import vobject\n    from pytz import timezone\n\n#let's start builting the ical object\n    cal = vobject.iCalendar()\n\n\n    macro  = \"Schedule begins {} Start Finish Saturday {} Sunday {} Monday {} Tuesday {} Wednesday {} Thursday {} Friday {}\"\n    raw_schedule = raw_schedule.replace('RTO','')\n    parsed = parse ( macro, \" \".join(raw_schedule.split()))\n\n\n    startdate = datetime.strptime(parsed.fixed[0], \"%b %d, %Y\")\n    #not localizing for now\n    #startdate = timezone('US/Pacific').localize(startdate)\n\n    days = parsed.fixed[1:]\n    schedule_list = []\n    stuff = []\n    for d in range(len(days)):\n        daydelta = timedelta(days=d)\n        mydate = startdate+daydelta\n        stuff.append(days[d])\n        stime_string, etime_string = days[d].split(\" \")\n\n        if stime_string == \"00:00AM\":\n            print \"YOU ARE OFF\"\n        else:\n            stime = datetime.strptime(stime_string,\"%I:%M%p\").time()\n            etime = datetime.strptime(etime_string,\"%I:%M%p\").time()\n\n            start_datetime = mydate.replace(hour=stime.hour, minute=stime.minute)\n            end_datetime = mydate.replace(hour=etime.hour, minute=etime.minute)\n\n            day_schedule = [start_datetime,end_datetime]\n\n            schedule_list.append(day_schedule)\n\n\n            v = cal.add(\"vevent\")\n            v.add('summary').value = days[d]\n            start = v.add('dtstart')\n            start.value = start_datetime\n            end = v.add('dtend')\n            v.add('location').value = \"Apple Store Bay Street\"\n            end.value = end_datetime\n\n    return cal.serialize()\n\n\n",
+			"file": "applications/baystreet/controllers/schedule2.py",
+			"file_size": 6246,
+			"file_write_time": 1377480681000000,
+			"settings":
+			{
+				"buffer_size": 6190,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/bdrydyk/dev/web2py/applications/baystreet/views/default/index.html",
+		"/Users/bdrydyk/Dropbox/web2py/applications/baystreet/errors/173.245.80.44.2013-08-26.00-55-07.ef195ac4-0fd8-427b-a509-dff04d6c3994",
+		"/Users/bdrydyk/dev/web2py/applications/baystreet/views/default/schedule.html",
+		"/Users/bdrydyk/dev/web2py/applications/baystreet/views/layout.html-bak.html",
+		"/Users/bdrydyk/dev/web2py/applications/tours/views/default/google api keys",
+		"/Users/bdrydyk/dev/web2py/applications/tours/views/layout.html",
+		"/Users/bdrydyk/dev/web2py/applications/tours/views/default/locked.html",
+		"/Users/bdrydyk/rpi/flask/camera/movement.py",
+		"/Users/bdrydyk/dev1/web2py/applications/kittyguard/static/plugin_layouts/superfish.css",
+		"/Users/bdrydyk/dev1/web2py/applications/kittyguard/static/plugin_layouts/superfish.js",
+		"/Users/bdrydyk/dev1/web2py/applications/kittyguard/static/plugin_layouts/layouts/solutiongreen/default.css",
+		"/Users/bdrydyk/dev1/web2py/applications/kittyguard/static/css/web2py.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"left",
+			"span",
+			"css",
+			"\n",
+			"api"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "applications/baystreet/views/layout.html",
+					"settings":
+					{
+						"buffer_size": 2493,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1497,
+								1497
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 482.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "router.py",
+					"settings":
+					{
+						"buffer_size": 9452,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1133.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "routes.py",
+					"settings":
+					{
+						"buffer_size": 9522,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5640,
+								5640
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1194.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "applications/baystreet/views/schedule/index.html",
+					"settings":
+					{
+						"buffer_size": 1376,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								259,
+								259
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "applications/baystreet/controllers/schedule.py",
+					"settings":
+					{
+						"buffer_size": 5111,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2994,
+								2994
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 801.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "applications/baystreet/static/css/baystreet.css",
+					"settings":
+					{
+						"buffer_size": 5942,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								855,
+								855
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 79.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "applications/baystreet/models/db.py",
+					"settings":
+					{
+						"buffer_size": 3648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1922,
+								1922
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 545.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "applications/baystreet/views/default/user.html",
+					"settings":
+					{
+						"buffer_size": 888,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"file": "applications/baystreet/necessarytext.py",
+					"settings":
+					{
+						"buffer_size": 5212,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								485,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "applications/baystreet/controllers/schedule2.py",
+					"settings":
+					{
+						"buffer_size": 6190,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								952,
+								654
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.587154556869,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.545075687221,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"controllers/schedule.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
