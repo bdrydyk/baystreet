@@ -48,7 +48,7 @@ p22
 (dp23
 S'hmac_key'
 p24
-S'fe7ccbff-56d1-4a23-be7c-af59f3488b53'
+S'adac40c9-d9d1-41e1-91a3-91ab5c683ab6'
 p25
 sS'remember'
 p26
@@ -58,7 +58,7 @@ p27
 cdatetime
 datetime
 p28
-(S'\x07\xdd\x08\x1c\r.+\x01P\xd2'
+(S'\x07\xdd\x08\x1c\x10&\x07\x05\xe0{'
 tRp29
 sS'user'
 p30
@@ -114,7 +114,7 @@ S'Schedule begins Aug 17, 2013    Start                       Finish  \r\nSaturd
 p53
 sS'_formkey[login]'
 p54
-S'32b3621f-1b49-4d30-91ea-dbf5f42bed5b'
+S'b0a2e7d9-433f-41ce-9882-5b708d278450'
 p55
 sS'_formkey[auth_user/create]'
 p56
@@ -146,11 +146,11 @@ S'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r
 p69
 sS'_formkey[default]'
 p70
-S'8be929a9-43f6-41f8-ab93-a24a00e4d988'
+S'1d3caea8-ed96-40c2-8933-2cb8060deb4c'
 p71
 sS'_session_hash'
 p72
-S'a48de598d21e5b49fa6795f196de812a'
+S'e184b7d916f448e7f7755fe74a42284b'
 p73
 sS'user_email'
 p74
