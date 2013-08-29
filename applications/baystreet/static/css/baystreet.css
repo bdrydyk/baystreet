@@ -1,80 +1,51 @@
-/** these MUST stay **/
-a {text-decoration:none; white-space:nowrap}
-a:hover {text-decoration:underline}
-a.button {text-decoration:none}
-h1,h2,h3,h4,h5,h6 {margin:0.5em 0 0.25em 0; display:block;
-  font-family:Helvetica}
-h1 {font-size:2.00em}
-h2 {font-size:3.00em}
-h3 {font-size:2.00em}
-h4 {font-size:1.50em}
-h5 {font-size:1.25em}
-h6 {font-size:1.12em}
+  html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
 
-form table tr td label {text-align:left}
-p,table,ol,ul {padding:0; margin: 0.75em 0}
-p {text-align:justify}
-ol, ul {list-style-position:outside; 
-    margin-left:1em;
-    list-style-type: upper-roman;
-    font-size: 1.00em;
-    }
-li {
-    margin-bottom:0.1em;
-    font-size: 1.00em;
-    clear:left;
-    padding-bottom: 1em;
-}
-#imagelist{
-    list-style-type: none;
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
 
-}
- span.bold-red {
-    color: red;
-    font-weight: bold;
-}
-span,input,select,textarea,button,label,a {display:inline}
-img {border:0}
-blockquote,blockquote p,p blockquote {
-  font-style:italic; margin:0.5em 30px 0.5em 30px; font-size:0.9em}
-i,em {font-style:italic}
-strong {font-weight:bold}
-small {font-size:0.8em}
-code {font-family:Courier}
-textarea {width:100%}
-video {width:400px}
-audio {width:200px}
-input[type=text],input[type=password],select{width:300px; margin-right:5px}
-.hidden {display:none;visibility:visible}
-.right {float:right; text-align:right}
-.left {float:left; text-align:left}
-.center {width:100; text-align:center; vertical-align:middle}
-/** end **/
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
 
-/* Sticky footer begin */
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
 
-.main {
-  padding:20px 0 50px 0;
-  font-family:"Helvetica";
-}
 
-.footer,.push {
-  height:6em;
-  padding:1em 0;
-  clear:both;
-}
 
-.footer-content {position:relative; bottom:-4em; width:100%}
+      /* Custom page CSS
+      -------------------------------------------------- */
+      /* Not required for template or sticky footer method. */
 
-.auth_navbar {
-    white-space:nowrap;
-}
+      #wrap > .container {
+        padding-top: 60px;
+      }
+      .container .credit {
+        margin: 20px 0;
+      }
 
-/* Sticky footer end */
+      code {
+        font-size: 80%;
+      }
 
-.footer {
-    border-top:1px #DEDEDE solid;
-}
-.header {
-    /* background:<fill here for header image>; */
-}
