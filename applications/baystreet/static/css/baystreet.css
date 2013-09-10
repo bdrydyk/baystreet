@@ -1,3 +1,26 @@
+
+#steps {list-style-position:outside; 
+    margin-left:1em;
+    list-style-type: upper-roman;
+    font-size: 1.00em;
+    }
+#steps li {
+    margin-bottom:0.1em;
+    font-size: 1.00em;
+    clear:left;
+    padding-bottom: 1em;
+}
+#imagelist{
+    list-style-type: none;
+
+}
+#contents{
+    width : 600px;
+}
+ span.bold-red {
+    color: red;
+    font-weight: bold;
+}
   html,
       body {
         height: 100%;
@@ -48,4 +71,5 @@
       code {
         font-size: 80%;
       }
+
 

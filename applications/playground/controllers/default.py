@@ -41,8 +41,8 @@ def user():
     return dict(form=auth())
 
 def schedule():
-    form = FORM(
-            INPUT(_name='user_email', requires=IS_NOT_EMPTY()),
+    form = FORM( 
+            INPUT(_name='user_email',_type="email", requires=IS_NOT_EMPTY()),
             TEXTAREA(_name="schedule_text", requires=IS_NOT_EMPTY()),
             INPUT(_type='submit'))
     if form.process().accepted:

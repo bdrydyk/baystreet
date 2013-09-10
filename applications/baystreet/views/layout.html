@@ -19,7 +19,6 @@
     {{  
   response.files.append(URL('static','css/bootstrap.min.css'))
   response.files.append(URL('static','css/bootstrap-responsive.min.css'))
-  response.files.append(URL('static','css/main.css'))
   response.files.append(URL('static','css/baystreet.css'))
   }}
 
@@ -82,7 +81,7 @@
 
     <div id="footer">
       <div class="container">
-        <p class="muted credit">Al this work involved <a href="http://bdrydyk.pythonanywhere.com">Brandon Drydyk</a>.</p>
+        <p class="muted credit">This was made by <a href="http://bdrydyk.pythonanywhere.com">Brandon Drydyk</a> with a bunch of frameworks and stuff..</p>
       </div>
     </div>
   </div>
@@ -93,7 +92,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-      {{  
+{{  
   response.files.append(URL('static','js/jquery.js'))
   response.files.append(URL('static','js/bootstrap-transition.js'))
   response.files.append(URL('static','js/bootstrap-alert.js'))
@@ -107,7 +106,8 @@
   response.files.append(URL('static','js/bootstrap-collapse.js'))
   response.files.append(URL('static','js/bootstrap-carousel.js'))
   response.files.append(URL('static','js/bootstrap-typeahead.js'))
-  }}
+  response.files.append(URL('static','js/jquery.validate.min.js'))
+}}
 
 </body>
 </html>
