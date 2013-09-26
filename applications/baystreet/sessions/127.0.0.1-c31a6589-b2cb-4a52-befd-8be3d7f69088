@@ -48,7 +48,7 @@ p22
 (dp23
 S'hmac_key'
 p24
-S'029fd499-3085-46ac-9eab-2758516cab26'
+S'9982fa33-6525-48de-921b-040d9e148b4f'
 p25
 sS'remember'
 p26
@@ -58,7 +58,7 @@ p27
 cdatetime
 datetime
 p28
-(S'\x07\xdd\t\x04\x0c4\x18\x01\xbcq'
+(S"\x07\xdd\t\x19\x16.'\x05\xea#"
 tRp29
 sS'user'
 p30
@@ -110,11 +110,11 @@ sS'last_orderby'
 p51
 NsS'raw_schedule'
 p52
-S'Schedule begins Aug 17, 2013    Start                       Finish  \r\nSaturday        11:00AM                         8:00PM        \r\nSunday      11:00AM                         8:00PM        \r\nMonday      1:00PM                          10:00PM       \r\nTuesday     1:00PM                          10:00PM       \r\nWednesday       00:00AM                         00:00AM       \r\nThursday        00:00AM                         00:00AM       \r\nFriday      11:00AM                         8:00PM'
+S'Schedule begins Sep 21, 2013\tStart\t\t\t\t\t\tFinish\t\r\nSaturday\t \t1:00PM\t                     \t10:00PM\t      \r\nSunday\t \t11:00AM\t                     \t8:00PM\t      \r\nMonday\t \t1:00PM\t                     \t10:00PM\t      \r\nTuesday\t \t1:00PM\t                     \t10:00PM\t      \r\nWednesday\t \t00:00AM\t                     \t00:00AM\t      \r\nThursday\t \t00:00AM\t                     \t00:00AM\t      \r\nFriday\t \t1:00PM\t                     \t10:00PM'
 p53
 sS'_formkey[login]'
 p54
-S'b3cb86a2-2988-4d83-80ed-7c4ffe62480b'
+S'2876e7f1-74b7-428e-9a0b-0669defb2342'
 p55
 sS'_formkey[auth_user/create]'
 p56
@@ -142,15 +142,15 @@ S'bdrydyk@gmail.com'
 p67
 sS'ical_text'
 p68
-S'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20130829T023222Z-58919@Brandons-iMac.local\r\nDTSTART:20130817T110000\r\nDTEND:20130817T200000\r\nLOCATION:Apple Store Bay Street\r\nSUMMARY:11:00AM 8:00PM\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:20130829T023222Z-90179@Brandons-iMac.local\r\nDTSTART:20130818T110000\r\nDTEND:20130818T200000\r\nLOCATION:Apple Store Bay Street\r\nSUMMARY:11:00AM 8:00PM\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:20130829T023222Z-71670@Brandons-iMac.local\r\nDTSTART:20130819T130000\r\nDTEND:20130819T220000\r\nLOCATION:Apple Store Bay Street\r\nSUMMARY:1:00PM 10:00PM\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:20130829T023222Z-60068@Brandons-iMac.local\r\nDTSTART:20130820T130000\r\nDTEND:20130820T220000\r\nLOCATION:Apple Store Bay Street\r\nSUMMARY:1:00PM 10:00PM\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:20130829T023222Z-93651@Brandons-iMac.local\r\nDTSTART:20130823T110000\r\nDTEND:20130823T200000\r\nLOCATION:Apple Store Bay Street\r\nSUMMARY:11:00AM 8:00PM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n'
+S'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20130926T054648Z-95698@Brandons-iMac.local\r\nDTSTART:20130921T130000\r\nDTEND:20130921T220000\r\nLOCATION:Apple Store Bay Street\r\nSUMMARY:1:00PM 10:00PM\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:20130926T054648Z-35471@Brandons-iMac.local\r\nDTSTART:20130922T110000\r\nDTEND:20130922T200000\r\nLOCATION:Apple Store Bay Street\r\nSUMMARY:11:00AM 8:00PM\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:20130926T054648Z-39626@Brandons-iMac.local\r\nDTSTART:20130923T130000\r\nDTEND:20130923T220000\r\nLOCATION:Apple Store Bay Street\r\nSUMMARY:1:00PM 10:00PM\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:20130926T054648Z-95362@Brandons-iMac.local\r\nDTSTART:20130924T130000\r\nDTEND:20130924T220000\r\nLOCATION:Apple Store Bay Street\r\nSUMMARY:1:00PM 10:00PM\r\nEND:VEVENT\r\nBEGIN:VEVENT\r\nUID:20130926T054648Z-76969@Brandons-iMac.local\r\nDTSTART:20130927T130000\r\nDTEND:20130927T220000\r\nLOCATION:Apple Store Bay Street\r\nSUMMARY:1:00PM 10:00PM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n'
 p69
 sS'_formkey[default]'
 p70
-S'bd6881ab-18b1-4456-9947-0e6b3097ffb2'
+S'c50b0cf7-8244-4976-996e-2d3f4b3ff4d4'
 p71
 sS'_session_hash'
 p72
-S'82bf31ce4a71d6d062ffa5ee3d2f6f7e'
+S'2b992e5d957a7cba82553edc4059a8c3'
 p73
 sS'user_email'
 p74
