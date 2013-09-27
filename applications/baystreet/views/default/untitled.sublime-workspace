@@ -1,0 +1,534 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"raw_schedule",
+				"raw_schedule"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1517,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bdrydyk/dev/web2py/applications/playground/views/layout.html",
+			"settings":
+			{
+				"buffer_size": 4405,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bdrydyk/dev/web2py/applications/baystreet/static/css/baystreet.css",
+			"settings":
+			{
+				"buffer_size": 1473,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bdrydyk/dev/web2py/applications/baystreet/necessarytext.py",
+			"settings":
+			{
+				"buffer_size": 4699,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bdrydyk/dev/web2py/applications/playground/views/default/index.html",
+			"settings":
+			{
+				"buffer_size": 1608,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "/* Sticky footer styles\n-------------------------------------------------- */\n\nhtml,\nbody {\n  height: 100%;\n  /* The html and body elements cannot have any padding or margin. */\n}\n\n/* Wrapper for page content to push down footer */\n#wrap {\n  min-height: 100%;\n  height: auto !important;\n  height: 100%;\n  /* Negative indent footer by its height */\n  margin: 0 auto -60px;\n  /* Pad bottom by footer height */\n  padding: 0 0 60px;\n}\n\n/* Set the fixed height of the footer here */\n#footer {\n  height: 60px;\n  background-color: #f5f5f5;\n}\n\n\n/* Custom page CSS\n-------------------------------------------------- */\n/* Not required for template or sticky footer method. */\n\n#wrap > .container {\n  padding: 60px 15px 0;\n}\n.container .credit {\n  margin: 20px 0;\n}\n\n#footer > .container {\n  padding-left: 15px;\n  padding-right: 15px;\n}\n\ncode {\n  font-size: 80%;\n}",
+			"file": "/Users/bdrydyk/dev/web2py/applications/playground/static/examples/sticky-footer-navbar/sticky-footer-navbar.css",
+			"file_size": 854,
+			"file_write_time": 1377733780000000,
+			"settings":
+			{
+				"buffer_size": 854,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bdrydyk/dev/web2py/html5-boilerplate/index.html",
+			"settings":
+			{
+				"buffer_size": 2014,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/Users/bdrydyk/dev/web2py/applications/playground/static/index.html",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bdrydyk/dev/web2py/applications/playground/static/examples/sticky-footer-navbar/index.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/bdrydyk/dev/web2py/applications/baystreet/views/layout.html",
+		"/Users/bdrydyk/dev/web2py/applications/playground/controllers/default.py",
+		"/Users/bdrydyk/dev/web2py/applications/baystreet/static/css/baystreet.css",
+		"/Users/bdrydyk/dev/web2py/router.py",
+		"/Users/bdrydyk/dev/web2py/routes.example.py",
+		"/Users/bdrydyk/dev/web2py/routes.py",
+		"/Users/bdrydyk/dev/web2py/applications/baystreet/routes.py",
+		"/Users/bdrydyk/dev/web2py/applications/playground/routes.py",
+		"/Users/bdrydyk/dev/web2py/applications/baystreet/views/default/index.html",
+		"/Users/bdrydyk/Dropbox/web2py/applications/baystreet/errors/173.245.80.44.2013-08-26.00-55-07.ef195ac4-0fd8-427b-a509-dff04d6c3994",
+		"/Users/bdrydyk/dev/web2py/applications/baystreet/views/default/schedule.html",
+		"/Users/bdrydyk/dev/web2py/applications/baystreet/views/layout.html-bak.html",
+		"/Users/bdrydyk/dev/web2py/applications/tours/views/default/google api keys",
+		"/Users/bdrydyk/dev/web2py/applications/tours/views/layout.html",
+		"/Users/bdrydyk/dev/web2py/applications/tours/views/default/locked.html",
+		"/Users/bdrydyk/rpi/flask/camera/movement.py",
+		"/Users/bdrydyk/dev1/web2py/applications/kittyguard/static/plugin_layouts/superfish.css",
+		"/Users/bdrydyk/dev1/web2py/applications/kittyguard/static/plugin_layouts/superfish.js",
+		"/Users/bdrydyk/dev1/web2py/applications/kittyguard/static/plugin_layouts/layouts/solutiongreen/default.css",
+		"/Users/bdrydyk/dev1/web2py/applications/kittyguard/static/css/web2py.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"left",
+			"span",
+			"css",
+			"\n",
+			"api"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 1517,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1163,
+								1163
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "/Users/bdrydyk/dev/web2py/applications/playground/views/layout.html",
+					"settings":
+					{
+						"buffer_size": 4405,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4386,
+								4386
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 291.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/bdrydyk/dev/web2py/applications/baystreet/static/css/baystreet.css",
+					"settings":
+					{
+						"buffer_size": 1473,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								719,
+								719
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 184.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/bdrydyk/dev/web2py/applications/baystreet/necessarytext.py",
+					"settings":
+					{
+						"buffer_size": 4699,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								485,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "/Users/bdrydyk/dev/web2py/applications/playground/views/default/index.html",
+					"settings":
+					{
+						"buffer_size": 1608,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/bdrydyk/dev/web2py/applications/playground/static/examples/sticky-footer-navbar/sticky-footer-navbar.css",
+					"settings":
+					{
+						"buffer_size": 854,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "/Users/bdrydyk/dev/web2py/html5-boilerplate/index.html",
+					"settings":
+					{
+						"buffer_size": 2014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1465,
+								1113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/bdrydyk/dev/web2py/applications/playground/static/index.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/bdrydyk/dev/web2py/applications/playground/static/examples/sticky-footer-navbar/index.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.587154556869,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.90388685809,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"controllers/schedule.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

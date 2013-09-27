@@ -103,7 +103,7 @@ routers = dict(
     # base router
     BASE=dict(
         default_application='baystreet',
-        default_controller = 'schedule',
+        default_controller = 'default',
         applications = "ALL"
     ),
 )

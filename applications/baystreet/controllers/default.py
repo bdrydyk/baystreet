@@ -9,18 +9,59 @@
 ## - call exposes all registered services (none by default)
 #########################################################################
 import vobject
-import re
 from datetime import datetime
-def index():
-    """
-    example action using the internationalization operator T and flash
-    rendered by views/default/index.html or views/generic.html
+from parse import *
+from gluon.tools import Mail
+import StringIO
 
-    if you need a simple wiki simple replace the two lines below with:
-    return auth.wiki()
-    """
-    response.flash = T("Welcome to web2py!")
-    return dict(message=T('Hello World'))
+from parse import *
+from datetime import datetime, timedelta
+import vobject
+from pytz import timezone
+
+@auth.requires_login()
+def index():
+
+    form=FORM(TABLE(
+                    TR("Your personal email:",INPUT(_type="text",_name="email",requires=IS_EMAIL())),
+                    TR("Paste your schedule here",TEXTAREA(_name="schedule_text", requires=IS_NOT_EMPTY())),
+                    TR("",INPUT(_type="submit",_value="SUBMIT"))))
+    if form.process().accepted:
+
+        mail = Mail()
+        mail.settings.server = 'smtp.gmail.com:587'
+        mail.settings.sender = 'baystreetschedule@gmail.com'
+        mail.settings.login = 'baystreetschedule@gmail.com:dekeyser'
+
+        session.email = form.vars.email
+        session.raw_schedule = form.vars.schedule_text
+        #redirect(URL('second'))
+        #Here is where we process the raw form data and create a vobject ical object
+        ical_text = process_raw_schedule(session.raw_schedule)
+        #start_date = datetime.strptime(dt, "%b %d, %Y")
+        outfile = StringIO.StringIO(ical_text)
+        #return dict(result="success", email=session.user_email, raw_schedule=session.raw_schedule, ical_text=ical_text)
+        #return ical_text
+
+        mail.send(session.email,
+            'Message subject',
+            '<html>hi guys!</html>',
+            attachments = mail.Attachment(outfile, 'schedule.ics'))
+
+
+        session.ical_text = ical_text
+
+
+        #redirect('/baystreet/schedule/schedule_file.ics')
+        return dict(result="success", email=session.email)
+
+       # return dict(email=session.user_email, text=session.schedule_text)
+    return dict(form=form)
+def schedule_file():
+    ical_text = session.ical_text
+
+    return ical_text
+
 
 
 def user():
@@ -40,186 +81,63 @@ def user():
     """
     return dict(form=auth())
 
-def schedule():
-    form = FORM(
-            INPUT(_name='user_email', requires=IS_NOT_EMPTY()),
-            TEXTAREA(_name="schedule_text", requires=IS_NOT_EMPTY()),
-            INPUT(_type='submit'))
-    if form.process().accepted:
-        session.user_email = form.vars.user_email
-        session.raw_schedule = form.vars.schedule_text
-        #redirect(URL('second'))
-        #Here is where we process the raw form data and create a vobject ical object
 
-
-        m = re.search("(\w{1,})\s(\d{1,}),\s(\d{4})", session.raw_schedule)
-        dt = m.group(0)
-
-        start_date = datetime.strptime(dt, "%b %d, %Y")
-        
-        return dict(result="success", email=session.user_email, raw_schedule=session.raw_schedule)
-
-    cal = vobject.iCalendar()
-    cal.add('vevent')
-    cal.vevent.add('summary').value = "This is a note"
-
-       # return dict(email=session.user_email, text=session.schedule_text)
-    return dict(form=form)
-@cache.action()
-def download():
-    """
-    allows downloading of uploaded files
-    http://..../[app]/default/download/[filename]
-    """
-    return response.download(request, db)
-
-
-def call():
-    """
-    exposes services. for example:
-    http://..../[app]/default/call/jsonrpc
-    decorate with @services.jsonrpc the functions to expose
-    supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv
-    """
-    return service()
-
-
-@auth.requires_signature()
-def data():
-    """
-    http://..../[app]/default/data/tables
-    http://..../[app]/default/data/create/[table]
-    http://..../[app]/default/data/read/[table]/[id]
-    http://..../[app]/default/data/update/[table]/[id]
-    http://..../[app]/default/data/delete/[table]/[id]
-    http://..../[app]/default/data/select/[table]
-    http://..../[app]/default/data/search/[table]
-    but URLs must be signed, i.e. linked with
-      A('table',_href=URL('data/tables',user_signature=True))
-    or with the signed load operator
-      LOAD('default','data.load',args='tables',ajax=True,user_signature=True)
-    """
-    return dict(form=crud())
-
-
+@auth.requires_login()
 def process_raw_schedule(raw_schedule):
-    """
-    This method will process pasted text of the format copied from mypage and then return 
-    a string representing the ical .ics file. The calling function will package and send
-    this file.
-
-    We'll use datetime.datetime() to organize our daily schedule info. As i see it we
-    will do it like this:
-        1. get the starting date from the first line "Schedule begins Jun 22, 2013"
-        2. organize a list of date times for each day. We should start just by
-        making an object for each workday. sat, sun...
-        3. build the ics file.
-
-    additonal functionality:
-        label the days that we have off.
+    """    raw_scheduleSchedule begins Aug 17, 2013    Start                       Finish  
+    Saturday        11:00AM                         8:00PM        
+    Sunday      11:00AM                         8:00PM        
+    Monday      1:00PM                          10:00PM       
+    Tuesday     1:00PM                          10:00PM       
+    Wednesday       00:00AM                         00:00AM       
+    Thursday        00:00AM                         00:00AM       
+    Friday      11:00AM                         8:00PM
     """
 
-    import re
-    from datetime import datetime
-
-    m = re.search("(\w{1,})\s(\d{1,}),\s(\d{4})", raw_schedule)
-    dt = m.group(0)
-
-    start_date = datetime.strptime(dt, "%b %d, %Y")
+#let's start builting the ical object
+    cal = vobject.iCalendar()
 
 
+    macro  = "Schedule begins {} Start Finish Saturday {} Sunday {} Monday {} Tuesday {} Wednesday {} Thursday {} Friday {}"
+    raw_schedule = raw_schedule.replace('RTO','')
+    parsed = parse ( macro, " ".join(raw_schedule.split()))
 
 
+    startdate = datetime.strptime(parsed.fixed[0], "%b %d, %Y")
+    #not localizing for now
+    #startdate = timezone('US/Pacific').localize(startdate)
 
-    ics_string ="""
-BEGIN:VCALENDAR
-CALSCALE:GREGORIAN
-VERSION:2.0
+    days = parsed.fixed[1:]
+    schedule_list = []
+    stuff = []
+    for d in range(len(days)):
+        daydelta = timedelta(days=d)
+        mydate = startdate+daydelta
+        stuff.append(days[d])
+        stime_string, etime_string = days[d].split(" ")
 
-X-WR-CALNAME:Apple store baystreet
-METHOD:PUBLISH
+        if stime_string == "00:00AM":
+            print "YOU ARE OFF"
+        else:
+            stime = datetime.strptime(stime_string,"%I:%M%p").time()
+            etime = datetime.strptime(etime_string,"%I:%M%p").time()
 
-BEGIN:VTIMEZONE
-TZID:US/Pacific
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0800
-RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
-DTSTART:20070311T020000
-TZNAME:PDT
-TZOFFSETTO:-0700
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0700
-RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
-DTSTART:20071104T020000
-TZNAME:PST
-TZOFFSETTO:-0800
-END:STANDARD
-END:VTIMEZONE
+            start_datetime = mydate.replace(hour=stime.hour, minute=stime.minute)
+            end_datetime = mydate.replace(hour=etime.hour, minute=etime.minute)
 
-BEGIN:VEVENT
-TRANSP:OPAQUE
-SUMMARY:Sat 1-10
-DTSTART;TZID=US/Pacific:20130622T130000
-DTEND;TZID=US/Pacific:20130617T220000
-DTSTAMP:20130627T014351Z
-LOCATION:Apple Store Baystreet
-END:VEVENT
+            day_schedule = [start_datetime,end_datetime]
 
-BEGIN:VEVENT
-TRANSP:OPAQUE
-SUMMARY:Sun 9-5
-DTSTART;TZID=US/Pacific:20130618T090000
-DTEND;TZID=US/Pacific:20130618T170000
-DTSTAMP:20130627T014351Z
-LOCATION:Apple Store Baystreet
-END:VEVENT
+            schedule_list.append(day_schedule)
 
-BEGIN:VEVENT
-TRANSP:OPAQUE
-SUMMARY:Mon 9-5
-DTSTART;TZID=US/Pacific:20130618T090000
-DTEND;TZID=US/Pacific:20130618T170000
-DTSTAMP:20130627T014351Z
-LOCATION:Apple Store Baystreet
-END:VEVENT
 
-BEGIN:VEVENT
-TRANSP:OPAQUE
-SUMMARY:Tues 9-5
-DTSTART;TZID=US/Pacific:20130618T090000
-DTEND;TZID=US/Pacific:20130618T170000
-DTSTAMP:20130627T014351Z
-LOCATION:Apple Store Baystreet
-END:VEVENT
+            v = cal.add("vevent")
+            v.add('summary').value = days[d]
+            start = v.add('dtstart')
+            start.value = start_datetime
+            end = v.add('dtend')
+            v.add('location').value = "Apple Store Bay Street"
+            end.value = end_datetime
 
-BEGIN:VEVENT
-TRANSP:OPAQUE
-SUMMARY:Wed 9-5
-DTSTART;TZID=US/Pacific:20130618T090000
-DTEND;TZID=US/Pacific:20130618T170000
-DTSTAMP:20130627T014351Z
-LOCATION:Apple Store Baystreet
-END:VEVENT
+    return cal.serialize()
 
-BEGIN:VEVENT
-TRANSP:OPAQUE
-SUMMARY:Thurs 9-5
-DTSTART;TZID=US/Pacific:20130618T090000
-DTEND;TZID=US/Pacific:20130618T170000
-DTSTAMP:20130627T014351Z
-LOCATION:Apple Store Baystreet
-END:VEVENT
 
-BEGIN:VEVENT
-TRANSP:OPAQUE
-SUMMARY:Fri 9-5
-DTSTART;TZID=US/Pacific:20130618T090000
-DTEND;TZID=US/Pacific:20130618T170000
-DTSTAMP:20130627T014351Z
-LOCATION:Apple Store Baystreet
-END:VEVENT
-
-END:VCALENDAR
-    """
-    return ics_string
