@@ -23,7 +23,7 @@ def index():
     img_exp ="([^\s]+(\.(?i)(jpg|png|gif|bmp))$)"
     hand_dir = getcwd() + "/applications/twl/static/images/HandShots"
     img_filename = listdir(hand_dir, img_exp)
-    return dict(cwd=getcwd(), hand_dir = hand_dir, hand_imgs = img_filename)
+    return dict( hand_imgs = img_filename)
 
 
 def w():
