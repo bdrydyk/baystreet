@@ -9,4 +9,13 @@ $(document).ready(function(){
     		.css("color","green")
     		.hide(1000);
   	});
+$('.hand-container').magnificPopup({
+  delegate: 'a', // child items selector, by clicking on it popup will open
+  type: 'image'
+  // other options
+});
+
+
+
+
 });
