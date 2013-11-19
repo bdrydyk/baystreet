@@ -42,3 +42,4 @@ Thumbs.db
 *.sqlite
 *.log
 *.table
+applications/*/sessions
