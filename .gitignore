@@ -39,3 +39,6 @@ Thumbs.db
 *.png
 *.PNG
 *.JPG
+*.sqlite
+*.log
+*.table
